@@ -1,0 +1,22 @@
+from random import randint
+
+# choisir un nombre entre 1 et 1000
+just_price = randint(1, 1000)  
+
+# statut du jeu
+running = True 
+
+# tant que le jeu est en cours 
+while running:
+    # demander à l'utilisateur de entrer un prix
+    user_price = int(input("Entrer un prix !"))
+    # si le prix est bon marqué C'est gagné 
+    if user_price == just_price:
+        print("C'est gagné")
+        running = False
+    # si le prix donné est superieur dire c'est moins
+    elif user_price > just_price:
+        print("C'est moins ! ")
+    # si le prix donné est inferieur dire c'est plus
+    elif just_price > user_price:
+        print("C'est plus ! ")
